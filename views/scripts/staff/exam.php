@@ -1,6 +1,19 @@
 <html>
 <head>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+	<script>
+	$(document).ready(function () {
+    //Disable cut copy paste
+    $('body').bind('cut copy paste', function (e) {
+        e.preventDefault();
+    });
+
+    //Disable mouse right click
+    $("body").on("contextmenu",function(e){
+        return false;
+    });
+});
+</script>
 	<script language="javascript">
 
 	var total_pages, time_limit, current_time, hrs, mins, begin ;
@@ -14,19 +27,19 @@
 	//alert(time_limit);
 	$(document).ready(function(){
 		//check result
-		
+
 		var myVar=setInterval(function(){
 			if (time_limit > 0 || seconds > 0) {
 				if (begin == 0){
 					begin = 1;
 					hrs = (time_limit - (time_limit % 3600)) / 3600;
-					mins = (time_limit % 3600) / 60;	
+					mins = (time_limit % 3600) / 60;
 				}
 				time_limit --;
 				seconds--;
 				if (seconds == 0){
 					hrs = (time_limit - (time_limit % 3600)) / 3600;
-					mins = (time_limit % 3600) / 60;	
+					mins = (time_limit % 3600) / 60;
 				}
 				if (seconds == 0 && time_limit > 0){
 					seconds = 59;
@@ -70,7 +83,7 @@
 							$.get('index.php?staff/submitresult',{ 'exam_id' : $('#exam_id').val(),'start' : next_page,'question_id':$('#question_id').val(), 'answer_id' : x ,'answer' : $('#essay_id').val(), 'time_consumed': time_consumed },function(data){
 								$('#exam').action="index.php?";
 								$('#exam').submit();
-							});	
+							});
 						}else{
 							$.get('index.php?staff/submitresult2',{ 'exam_id' : $('#exam_id').val(),'question_id':$('#question_id2').val(), 'time_consumed' : time_consumed },function(data){
 								$('#thankyou').load('index.php?staff/thankyou&exam_id='+$('#exam_id').val());
@@ -78,7 +91,7 @@
 								//$('#exam').submit();
 							});
 						}
-						
+
 					}
 				}
 			}
@@ -111,7 +124,7 @@
 				}else{
 					if (total_pages != 0){
 						alert('Please select an answer');
-						//return false;		
+						//return false;
 					}else{
 						$.get('index.php?staff/submitresult2',{ 'exam_id' : $('#exam_id').val(),'question_id':$('#question_id2').val(), 'answer': '', 'time_consumed' : time_consumed },function(data){
 							$('#thankyou').load('index.php?staff/thankyou&exam_id='+$('#exam_id').val());
@@ -119,9 +132,9 @@
 							//$('#exam').submit();
 						});
 					}
-					
+
 				}
-				
+
 			}
 			$(this).attr('disabled',false);
 		});
@@ -157,17 +170,17 @@
 						x = 0;
 					}else{
 						alert('Essay answer should not be empty');
-						
+
 					}
 				}else{
 					alert('Please select an answer');
 
-					
+
 				}
-			}	
+			}
 			$(this).attr('disabled',false);
 		});
-		
+
 		$('#essay_id').val($.trim($('#essay_id').val()));
 	});
 
@@ -181,7 +194,7 @@
 </head>
 <body>
     <div id="fb-root"></div>
-   
+
 	<form name="exam" id="exam" action="index.php?staff/thankyou">
 	<div style="margin-top: 20px; width: 990px; margin: 0 auto; " id="thankyou" class="mcstyle">
 		<div id="time" style="font-size: 18px;font-weight: bold; background-color: lightsteelblue" class="mcstyle" >
@@ -196,15 +209,15 @@
 						echo $data['exam'][0]['question_name'] ;
                                                 ?>
                                     <br/>
-                                   <?php 
+                                   <?php
                                    if($data['exam'][0]['img']!=NULL){
-                                   echo '<img src="data:image/jpeg;base64,'.base64_encode( $data['exam'][0]['img'] ).'" width="200" height="200"/>';   
-                                           
-                                }     ?>      
+                                   echo '<img src="data:image/jpeg;base64,'.base64_encode( $data['exam'][0]['img'] ).'" width="200" height="200"/>';
+
+                                }     ?>
 				</div>
 				<div>
-					<?php 
-			
+					<?php
+
 					if ($data['exam'][0]['question_type'] == 0){
 					?>
 
@@ -231,7 +244,7 @@
 				//}
 				?>
 				</div>
-				
+
 			<?php
 			}else{
 				header("Location:" . BASE_URL);
@@ -247,7 +260,7 @@
 			<input type="hidden" id="question_type" value="<?php echo $data['exam'][0]['question_type'] ;?>">
 	</div>
 	</form>
-	
+
 </body>
 
 </html>
