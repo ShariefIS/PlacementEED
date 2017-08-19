@@ -4,10 +4,10 @@ body{
 }
 
 .wrapper{
-    margin: 0 auto;width: 990px; height:auto;border: #545454 1px solid;overflow: hidden;
+    margin: 0 auto;width: 990px;
 }
 .bodycontainer{
-    width: 990px; height: auto;overflow: hidden;
+    width: 990px; height: auto;
 }
 .header{
     width: 990px; 

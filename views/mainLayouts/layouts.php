@@ -7,10 +7,7 @@
 
         <link rel="stylesheet" type="text/css" href="public/css/layout-z.css">
         <link rel="stylesheet" type="text/css" href="public/css/jquery.ui.datepicker.css">
-        <!--
-        <script type="text/javascript" src="public/js/jquery-1.6.2.js"></script>
-
-        -->
+       
         <script src="public/js/jquery.min.js"></script>
         <script src="public/js/jquery-ui.min.js"></script>
         <link href="public/css/jquery-ui.css" rel="stylesheet" type="text/css"/>
@@ -65,7 +62,7 @@ if (isset($_SESSION['user_id'])) {
         <form action="index.php?authenticate/verify" method="post">
             <div class="wrapper" >
                
-                <div class="bodycontainer" style="">
+                <div class="bodycontainer" style="align-content: center">
                     <div class="left_menu" style="width: 990px;margin-top: 10px;">
                         <?php
                         echo $data['nav'];
