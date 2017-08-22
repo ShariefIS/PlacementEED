@@ -43,8 +43,6 @@
         <?php
         if (is_array($data)) {
             foreach ($data as $row) {
-                // index.php?admin/examedit&exam_id=23
-                //$link = "javascript:loadPage('index.php?admin/examedit&exam_id=".$row['exam_id']."')";
                 $link = "javascript:loadPage('index.php?admin/questionlist&exam_id=" . $row['exam_id'] . "')";
                 ?>
                 <tr>

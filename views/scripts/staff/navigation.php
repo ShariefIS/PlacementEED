@@ -4,7 +4,9 @@ ul {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color:#0066cc;
+    background-color: #222222;
+   /* position: fixed;
+    top: 0;*/
 }
 
 li {
@@ -21,13 +23,17 @@ li a {
 }
 
 li a:hover {
-    background-color: #00ccff;
+    background-color: #269abc;
 }
 </style>
 <div>
     <ul>
- 
+        <li><a style="text-decoration: none;color: wheat;
+  font-size: 25px;
+  font-weight: bold;
+   " href="index.php" >PlaceMeant<span style="color: #269abc ">forYOU</span></a></li>
+  <li><a href="#" >Home</a></li>
   <li> <a href="javascript:loadPage('index.php?staff/index');"> Examinations List </a></li>
-  <li style="float: right;"><a style="color: greenyellow;" href="index.php?authenticate/logout"> Logout </a></li>
+  <li style="float: right;"><a  href="index.php?authenticate/logout"> LOGOUT </a></li>
     </ul>
 </div>

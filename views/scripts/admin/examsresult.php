@@ -34,7 +34,6 @@
             </tr>
 
             <?php
-            //print_r($data);
             if (is_array($data['exam'])) {
                 foreach ($data['exam'] as $row) {
                     ?>
@@ -44,15 +43,11 @@
                         <td align="center" class="line"> <?php echo ( $data[$row['user_id']][$row['exam_id']][0]['score'] == $row['passing_score'] ) ? 'PERFECT' : $data[$row['user_id']][$row['exam_id']][0]['score'] . ' over '. $row['passing_score']; ?> </td>
                         <td align="center" class="line">
                             <?php
-                           // echo $data[$row['user_id']][$row['exam_id']][0]['score'];
-                            
                             if ((($data[$row['user_id']][$row['exam_id']][0]['score'] / $row['passing_score']) * 100 ) >= $row['passing_grade']) {
                                 echo "<span style='color: green;'><b>Passed</b></span>";
                             } else {
                                 echo "<span style='color: red;'><b>Failed</b></span>";
-                               //echo  ($data[$row['user_id']][0]['score'] / $row['passing_score']) * 100;
-                                //echo $data[$row['user_id']][0]['score'];
-                            }
+                               }
                             
                             ?> 
                         </td>

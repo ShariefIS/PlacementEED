@@ -22,10 +22,10 @@
  </style>
 <table width="100%" class="table-new" border="0" cellspacing="0" cellpadding="5">
 	<tr class="tr-head">
-		<td widt="100" align="center" class="line2">  Examinees Name </td>
-		<td width="300" align="center" class="line2">Exam Name </td>
-		<td width="100" align="center" class="line2">Remarks </td>
-		<td align="center" class="line2">  View </td>
+		<th widt="100" align="center" >  Examinees Name </th>
+		<th width="300" align="center" >Exam Name </th>
+		<th width="100" align="center" >Remarks </th>
+		<th align="center">  View </th>
 	</tr>
 
 	<?php
@@ -33,7 +33,7 @@
 			foreach($data['exam'] as $row){
 	?>
 	<tr>
-		<td align="center" class="line"> <?php echo $row['user_lname'] . ', ' . $row['user_fname'];?></td>
+		<td align="center" class="line"> <?php echo $row['user_fname'] . ', ' . $row['user_lname'];?></td>
 		<td align="center" class="line"> <?php echo $row['exam_name']; ?></td>
 	<?php
 	?>

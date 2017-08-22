@@ -13,11 +13,10 @@ $(document).ready(function(){
 </style>
 <div class="mcstyle">
 	<?php
-	if (is_array($data['exam'])){
-	?>
+	if (is_array($data['exam'])){?>
 		<div>
 			<?php
-				echo $data['exam'][0]['question_name'];
+				echo 'Q'." ".$data['exam'][0]['question_name'];
                                 ?><br/><?php 
                                 if($data['exam'][0]['img']!=NULL){
                                   echo '<img src="data:image/jpeg;base64,'.base64_encode( $data['exam'][0]['img'] ).'" width="200" height="200"/>';   

@@ -17,7 +17,7 @@
         <link href="css/font-awesome.min.css" rel="stylesheet">
         <link id="switcher" href="css/themes/lite-blue-theme.css" rel="stylesheet">
         
-        <title> Placement EED </title>
+        <title>PLACE-MEANTforYOU</title>
         <script language="javascript">
             $(document).ready(function(){
                 //$("#exam_from2").datepicker();
@@ -52,22 +52,23 @@ if (isset($_SESSION['user_id'])) {
         <div class="container" id="header">
             
               <!-- TEXT BASED LOGO -->
-              <a class="navbar-brand" href="index.php" >Placement <span>EED</span></a>              
-                  
-                     
-            </div>
+              <a class="navbar-brand" href="index.php" >PlaceMeant<span>forYOU</span></a>
+              
+               
+        </div>
             
           </div>     
         
         <form action="index.php?authenticate/verify" method="post">
             <div class="wrapper" >
                
+             
                 <div class="bodycontainer" style="align-content: center">
-                    <div class="left_menu" style="width: 990px;margin-top: 10px;">
+                     <div class="left_menu" style="width: 990px;margin-top: 10px;">
                         <?php
                         echo $data['nav'];
-                        ?>
-                    </div>
+                        ?>   
+                    </div>  
                     <div class="contentcontainer" style="">
                         <div class="right_menu" style="width: 990px; height: auto;overflow:hidden; float: left;">
                             <div class="body_data" style="width: auto; height: auto; overflow: hidden; margin-top: 5px;">
@@ -86,13 +87,6 @@ if (isset($_SESSION['user_id'])) {
             <div class="col-lg-6 col-md-6 col-sm-6">
               <div class="footer_bootomLeft">
                 <p> Copyright &copy; All Rights Reserved</p>
-                
-              </div>
-            </div>               
-            <div class="col-lg-6 col-md-6 col-sm-6">
-  
-              <div class="footer_bootomRight">
-                <p>Designed by MD. IMRAN</p>
               </div>
             </div>
           </div>

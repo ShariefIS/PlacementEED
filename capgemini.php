@@ -7,7 +7,7 @@
     ================================================== -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-     <title>Placement EED</title>
+      <title>PLACE-MEANTforYOU</title>
 
     <!-- Mobile Specific Metas
     ================================================== -->
@@ -77,7 +77,7 @@
               </button>
               <!-- LOGO -->
               <!-- TEXT BASED LOGO -->
-              <a class="navbar-brand" href="index.php">Placement <span>EED</span></a>              
+              <a class="navbar-brand" href="index.php">PlaceMeant<span>forYOU</span></a>              
                   
                      
             </div>

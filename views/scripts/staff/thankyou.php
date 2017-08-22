@@ -1,13 +1,14 @@
-<style>
-
-.mcstyle{
-		font-family: 'Lucida Grande',Helvetica,Arial,Verdana,sans-serif; font-size: 0.9em; color: #535353!important;
-}
-</style>
-<div style="width: 100%;" class="mcstyle">
-	<div style="width: 50%; align: center;">
-		<b> Thank You For Taking The Exam </b>
-	</br>
-		<a href="index.php?staff/viewresults2&exam_id=<?php echo $_GET['exam_id'];?>"> View Results</a>
-	</div>
+<head>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/css/bootstrap.min.css" rel="stylesheet"/>
+</head>
+<div class="jumbotron text-xs-center">
+  <h1 class="display-3">Thank You!</h1>
+  <p class="lead"><strong>Please check your Result</strong> for further explanation on the exam questions.</p>
+  <hr>
+  <p>
+    <a href="index.php?staff/viewresults2&exam_id=<?php echo $_GET['exam_id'];?>"> View Results</a>
+  </p>
+  <p class="lead">
+      <a class="btn btn-primary btn-sm" href="index.php" role="button">Continue to homepage</a>
+  </p>
 </div>

@@ -15,7 +15,6 @@
 });
 </script>
 	<script language="javascript">
-
 	var total_pages, time_limit, current_time, hrs, mins, begin ;
 	var next_page = 0;
 	total_pages = <?php echo $data['count'][0]['count(exams.exam_id)'] - 1 ;?>;
@@ -47,7 +46,7 @@
 				time_consumed++;
 				$('#time').html('Time remaining : ' + (parseInt(hrs) > 0 ? parseInt(hrs) : '00') + ' : ' + (parseInt(mins) > 0 ? parseInt(mins) : '00') + ' : ' + (seconds > 0 ? seconds : '00'));
 			}else{
-				//submit data
+				
 				alert("Your time is up, all answers will be submitted!");
 				x = 0;
 				$("input[type='radio']:checked").each(function() {
@@ -58,11 +57,9 @@
 				window.clearInterval(myVar);
 				if (x == 1){
 					next_page++;
-					//$.get('index.php?staff/submitresult',{ 'exam_id' : $('#exam_id').val(),'start' : next_page,'question_id':$('#question_id').val(), 'answer_id' : $("input[type=radio]:checked").attr('id') },function(data){
+					
 					$.get('index.php?staff/submitresult',{ 'exam_id' : $('#exam_id').val(),'start' : next_page,'question_id':$('#question_id').val(), 'answer_id' : $("input[type=radio]:checked").attr('id'),'answer' : '', 'time_consumed' : time_consumed },function(data){
-						//$('#exam').action="index.php?staff/thankyou";
-						//$('#exam').submit();
-						$('#thankyou').load('index.php?staff/thankyou&exam_id='+$('#exam_id').val());
+					$('#thankyou').load('index.php?staff/thankyou&exam_id='+$('#exam_id').val());
 					});
 					x = 0;
 				}else{
@@ -141,7 +138,7 @@
 		$('#next').click(function(){
 			$(this).attr('disabled',true);
 			$("input[type='radio']:checked").each(function() {
-				//$("input[type=radio]:checked").attr('id');
+				
 				x = 1;
 			});
 			//alert($('#question_type').val());
@@ -156,6 +153,7 @@
 					}
 				});
 				x = 0;
+                                
 			}else{
 				if (type == 1){
 					if ( $('#essay_id').val().length >= 1 ) {
@@ -202,11 +200,13 @@
 		</div>
 		<div id="xx" style="width: 100%; margin-top: 5px;" class="mcstyle">
 			<?php
+                       
 			if (is_array($data['exam'])){
+                        
 			?>
 				<div>
 					<?php
-						echo $data['exam'][0]['question_name'] ;
+						echo 'Q'." ".$data['exam'][0]['question_name'] ;
                                                 ?>
                                     <br/>
                                    <?php

@@ -4,10 +4,10 @@ body{
 }
 
 .wrapper{
-    margin: 0 auto;width: 990px;
+    margin: 0 auto;width: 990px; 
 }
 .bodycontainer{
-    width: 990px; height: auto;
+    width: 990px; height: auto; overflow: hidden;
 }
 .header{
     width: 990px; 

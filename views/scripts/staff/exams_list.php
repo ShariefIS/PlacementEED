@@ -1,10 +1,37 @@
 <style>
-    .table-new {border:1px solid #00688B;text-align: center; margin-left:50px; margin-bottom:15px;}
-    .table-new tbody{border: 1px solid #00688B;}
-    .line {border-right: 1px solid #00688B;padding-right: 2px;margin-right: 5px;border-top: 1px solid #00688B;font-family: 'Lucida Grande',Helvetica,Arial,Verdana,sans-serif; font-size: 0.9em; color: #535353!important;}
-    .line1{border-top: 1px solid #00688B;font-family: 'Lucida Grande',Helvetica,Arial,Verdana,sans-serif; font-size: 0.9em; color: #535353!important;}
-    .line2{border-right: 1px solid #00688B;font-family: 'Lucida Grande',Helvetica,Arial,Verdana,sans-serif; font-size: 0.8em; color: #535353!important; font-weight:bold;}
-
+   table {
+    border-collapse: collapse;
+    margin-bottom: 3em;
+    width: 100%;
+    background: #fff;
+}
+td, th {
+    padding: 0.75em 1.5em;
+    text-align: left;
+}
+	td.err {
+		background-color: #e992b9;
+		color: #fff;
+		font-size: 0.75em;
+		text-align: center;
+		line-height: 1;
+	}
+th {
+    background-color: #31bc86;
+    font-weight: bold;
+    color: #fff;
+    white-space: nowrap;
+}
+tbody th {
+	background-color: #2ea879;
+}
+tbody tr:nth-child(2n-1) {
+    background-color: #f5f5f5;
+    transition: all .125s ease-in-out;
+}
+tbody tr:hover {
+    background-color: rgba(129,208,177,.3);
+}
 
     .error-msg{
         overflow:hidden;
@@ -25,10 +52,10 @@
 
     <table width="100%" class="table-new" border="0" cellspacing="0" cellpadding="5">
         <tr class="tr-head">
-            <td width="270" class="line2"><b> Exam Name </b></td>
+            <th width="270" ><b> Exam Name </b></th>
             
-            <td width="30" class="line2"> <b> Company </b></td>
-            <td widt="150" class="">Action</td>
+            <th width="30" > <b> Company </b></th>
+            <th widt="150" >Action</th>
         </tr>
         <?php
         if (is_array($data)) {
@@ -37,10 +64,10 @@
                 $link = "javascript:loadPage('index.php?admin/questionlist&exam_id=" . $row['exam_id'] . "')";
                 ?>
                 <tr>
-                    <td class="line"> <?php echo $row['exam_name']; ?> </td>
+                    <td > <?php echo $row['exam_name']; ?> </td>
               
-                    <td class="line"> <?php echo $row['department_name'];?></td>
-                    <td width="100" align="center" class="line1">
+                    <td > <?php echo $row['department_name'];?></td>
+                    <td width="100" align="center" >
                         <a href="javascript:loadPage('index.php?staff/examsresult&exam_id=<?php echo $row['exam_id'] ?>');"> View Result</a>
                     </td>
                 </tr>
