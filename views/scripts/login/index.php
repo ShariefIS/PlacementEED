@@ -69,6 +69,7 @@
             <div id="navbar" class="navbar-collapse collapse">
               <ul id="top-menu" class="nav navbar-nav navbar-right main-nav">
                 <li class="active"><a href="index.php">Home</a></li>
+                <li><a href="404.php">About Us</a></li>
                 <li><a href="404.php">Blog</a></li>
                 <li><a href="404.php">Contact</a></li>
               </ul>           
@@ -89,7 +90,7 @@
                     
                   </div>
                      
-        >
+        
     <!--=========== END SLIDER SECTION ================-->
 
     <!--=========== BEGIN ABOUT US SECTION ================-->
@@ -134,7 +135,7 @@ $(document).ready(function(){
 			<td> <input type="text" id="user_name" name="user_name" class="user_input"/></td>
 		</tr>
 		<tr>
-                    <td ><label for="user_password">Password :</label></td>;
+                    <td ><label for="user_password">Password :</label></td>
 			<td> <input type="password" id="user_password" name="user_password" class="user_input"></td>
 		</tr>
 		<tr>	
@@ -177,7 +178,7 @@ $(document).ready(function(){
                       <span class="fa fa-desktop"></span>
                     </div>
                     <h3>Technology</h3>
-                    <p>when an unknown printer took a galley of type and scrambled it to make a type specimen book</p>
+                    <!--p>when an unknown printer took a galley of type and scrambled it to make a type specimen book</p-->
                   </div>
                 </div>
                 <div class="col-lg-3 col-md-3 col-sm-3">
@@ -186,7 +187,7 @@ $(document).ready(function(){
                       <span class="fa fa-users"></span>
                     </div>
                     <h3>Best Tutor</h3>
-                    <p>when an unknown printer took a galley of type and scrambled it to make a type specimen book</p>
+                    <!--p>when an unknown printer took a galley of type and scrambled it to make a type specimen book</p -->
                   </div>
                 </div>
                 <div class="col-lg-3 col-md-3 col-sm-3">
@@ -195,7 +196,7 @@ $(document).ready(function(){
                       <span class="fa fa-flask"></span>
                     </div>
                     <h3>Practical Training</h3>
-                    <p>when an unknown printer took a galley of type and scrambled it to make a type specimen book</p>
+                    <!-- p>when an unknown printer took a galley of type and scrambled it to make a type specimen book</p-->
                   </div>
                 </div>
                 <div class="col-lg-3 col-md-3 col-sm-3">
@@ -204,7 +205,7 @@ $(document).ready(function(){
                       <span class="fa fa-support"></span>
                     </div>
                     <h3>Support</h3>
-                    <p>when an unknown printer took a galley of type and scrambled it to make a type specimen book</p>
+                    <!-- p>when an unknown printer took a galley of type and scrambled it to make a type specimen book</p -->
                   </div>
                 </div>
               </div>
@@ -273,16 +274,19 @@ $(document).ready(function(){
                 <li>
                   <div class="single_course">
                     <div class="singCourse_imgarea">
-                      <img src="img/wipro.jpg" />
+                      <img src="img/service_now.gif" />
                       <div class="mask">                         
-                        <a href="#" class="course_more">View</a>
+                        <a href="service_now.php" class="course_more">View</a>
                       </div>
                     </div>
                     <div class="singCourse_content">
-                    <h3 class="singCourse_title"><a href="#">Wipro</a></h3>
+                    <h3 class="singCourse_title"><a href="#">Service Now</a></h3>
                     
-                    <p>Wipro Limited is an Indian Information Technology Services corporation headquartered in Bengaluru, India.
-In 2013, Wipro demerged its non-IT businesses into separate companies to bring in more focus on independent businesses</p>
+                    <p>Meet the Fastest-Growing Enterprise Software Company Over $1 Billion<br>
+Some great ideas are born in a garage. Others in a dorm room. Or over pizza and beer.<br>
+Some form like the perfect wave.<br>
+ <br>
+ServiceNow is a great idea born at the beach—San Diego, 2004, to be exact. A little south of Silicon Valley. By founder Fred Luddy and a small tribe of techies and surfers.</p>
                     </div>
                    </div>
                 </li>  

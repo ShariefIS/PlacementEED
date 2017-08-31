@@ -84,10 +84,10 @@
             <div id="navbar" class="navbar-collapse collapse">
               <ul id="top-menu" class="nav navbar-nav navbar-right main-nav">
                 <li class="active"><a href="index.php">Home</a></li>
-                <li><a href="login.php">Login</a></li>
+               
                 
-                 <li><a href="3">Blog</a></li>
-                <li><a href="contact.php">Contact</a></li>
+                <li><a href="404.php">Blog</a></li>
+                <li><a href="404.php">Contact</a></li>
               </ul>           
             </div><!--/.nav-collapse -->
           </div>     
@@ -96,9 +96,8 @@
       <!-- END MENU -->    
     </header>
     <!--=========== END HEADER SECTION ================--> 
-
-    <!--=========== BEGIN COURSE BANNER SECTION ================-->
-    <section class="banner">
+  <!--=========== BEGIN COURSE BANNER SECTION ================-->
+   <section id="imgBanner">
       <h2>Capgemini- Tips & Tricks</h2>
     </section>
     <!--=========== END COURSE BANNER SECTION ================-->
@@ -111,6 +110,8 @@
           <!-- start course content -->
           <div class="col-lg-8 col-md-8 col-sm-8">
             <div class="courseArchive_content">              
+              <div class="singlecourse_ferimg_area">
+               <div class="singlecourse_ferimg">
              
              <div class="single_course_content">
       
@@ -195,47 +196,7 @@ Regards
 Mohammed Imran 
 </pre><!-- CLOSE ADD CONTENT OF THE COMPANY --> 
 
-<!--- ADD TABLE CONTENTS IF NEEDED-->
-               <table class="table table-striped course_table">
-                <thead>
-                  <tr>          
-                    <th>Course Title</th>
-                    <th>Instructor</th>
-                    <th>Timing</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>          
-                    <td>Basic Of Matrix</td>
-                    <td>Dr. Steve Palmer</td>
-                    <td>08:00 to 13:00</td>
-                  </tr>
-                  <tr>
-                    <td>Matrix Overview</td>          
-                    <td>Jacob</td>                    
-                    <td>08:00 to 13:00</td>
-                  </tr>
-                  <tr>
-                    <td>Matrix Application</td>          
-                    <td>Kimberly Jones</td>                    
-                    <td>08:00 to 13:00</td>
-                  </tr>
-                  <tr>
-                    <td>Advanced Matrix</td>          
-                    <td>Dr. Klee</td>                    
-                    <td>08:00 to 13:00</td>
-                  </tr>
-                </tbody>
-              </table> <!-- TABLE CLOSE-->
-               <!-- IF ANY BULLET POINTS START -->  <ul>
-                      <li><span class="fa fa-angle-double-right"></span>There are many variations of passages</li>
-                      <li><span class="fa fa-angle-double-right"></span>Lorem Ipsum generators</li>
-                      <li><span class="fa fa-angle-double-right"></span>There are many variations of passages</li>
-                      <li><span class="fa fa-angle-double-right"></span>The uses a dictionary of over 200 Latin words</li>
-                      <li><span class="fa fa-angle-double-right"></span>Proin condimentum risus ligula</li>
-                    </ul>
-              <!-- IF ANY BULLET POINTS END-->
-             </div>
+ </div>
             
             
          
