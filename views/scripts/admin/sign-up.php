@@ -1,4 +1,9 @@
 <html>
+     <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>PlaceMeantForU</title>
+      <link rel="shortcut icon" type="image/icon" href="image/P.jpg"/>
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 <script language="javascript">
 
@@ -50,15 +55,57 @@ $(document).ready(function(){
 	});
 });
 </script>
+ <body style="background: antiquewhite  "> 
 <style>
 .mcstyle{
 	font-family: 'Lucida Grande',Helvetica,Arial,Verdana,sans-serif; font-size: 0.8em; color: #535353!important;
 }
+ footer {
+    padding: 1em;
+    color: white;
+    background-color: black;
+    clear: left;
+    text-align: center;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover:not(.active) {
+    background-color: darksalmon;
+}
+
+.active {
+    background-color: #4CAF50;
+}
 </style>
-<div id="users" class="users" style="width: 990px; height: 675px;">
-	<div class="user_add_data" style="margin: 0 auto;">
+<ul>
+    <li><a href="#">PlaceMeant<span style=" color: gold;">ForU</span></a></li>
+  <li style="float:right"><a href="index.html">Home</a></li>
+  <li style="float:right"><a href="index.php?admin/signupnew">SIGN-UP</a></li>
+  
+</ul>
+<div id="users" class="users" style="width: 990px; height: 675px;" >
+	<div class="user_add_data" style="margin: 0 auto;position: relative;left: 200px; top: 50px;">
 	<form name="user_add" id="user_add" method="post" action="index.php?">
-		<table width="100%">
+            <table width="100%">
 		<tr>
 			<td class="mcstyle" width="12%"> First name : </td>
 			<td width="12%"> <input type="text" id="fname" name="fname" class="user_input" > </td>
@@ -104,4 +151,5 @@ $(document).ready(function(){
 	</form>
 	</div>
 </div>
+ <footer><p> Copyright &copy; All Rights Reserved</p> </footer>
 </html>

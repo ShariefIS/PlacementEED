@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+	<!--title-->
+      <title>PlaceMeantForU</title>
+	
+	<!--CSS-->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/animate.css" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/font.css" rel="stylesheet">
+	<link href="css/prettyPhoto.css" rel="stylesheet">	
+	<link href="css/main.css" rel="stylesheet">
+	<link href="css/responsive.css" rel="stylesheet">	
+	
+    <!--[if lt IE 9]>
+	    <script src="js/html5shiv.js"></script>
+	    <script src="js/respond.min.js"></script>
+    <![endif]-->       
+    <link rel="shortcut icon" href="images/P.jpg">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="images/ico/apple-touch-icon-57-precomposed.png">
+</head><!--/head-->
+<body id="single-blog-page">
+	<!-- Page Loader -->
+	<div class="preloader">
+        <div id="loaderImage"></div>
+    </div>
+	
+	<header id="navigation">
+        <div class="navbar main-nav" role="banner">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="index.html">
+                    	<h1><img class="img-responsive" src="images/logo.png" alt="logo"></h1>
+                    </a>                    
+                </div>	
+                <nav class="collapse navbar-collapse navbar-right">					
+                    <ul class="nav navbar-nav">
+                        <li class="scroll"><a href="index.html">Home</a></li> 
+						
+						<li class="scroll"><a href="index.html#about-us">About us</a></li>
+						
+                        <li class="scroll"><a href="index.html#contact-us">Contact</a></li>                        
+                    </ul>					
+                </nav>
+            </div>
+        </div>
+    </header><!--/#navigation--> 
+	
+    <section id="blog-details">
+		<div class="container">
+			<div class="row blog-item">
+				<div class="col-sm-3">
+                    <div class="sidebar">
+						<div class="sidebar-item categories">
+                            <h3>Companies</h3>
+                            <ul class="nav navbar-stacked">
+                                <li><a href="del.html">Deloitte</a></li>
+                                <li><a href="in.html">Infosys</a></li>
+                                <li class="active"><a href="ser.html">Service Now</a></li>
+                                <li><a href="cap.html">Capgemini</a></li>
+                                <li><a href="wip.html">Wipro</a></li>
+								 <li><a href="tec.html">Tech Mahindra</a></li>
+                            </ul>
+                        </div>                      
+                    </div>
+                </div>
+				<div class="col-sm-9 blog-content">
+					<div class="entry-header">						
+						<img class="img-responsive" src="images/blog/full-post111.jpg" alt="" />	
+						<div class="entry-meta">
+							<div class="pull-left post-date">
+								<p><span>23</span>ِAUGUST</p>
+							</div>
+							<div class="pull-left post-meta">
+								<h3>SERVICE NOW (Dynamic Programming)</h3>
+								<span><a href="#"><i class="fa fa-user"></i>By Dr. Mohammed Imran</a></span>
+							</div>		
+						</div>
+					</div>
+					<div class="entry-post">						
+					
+<p>Dynamic Programming | Set 11 (Egg Dropping Puzzle)<br>
+The following is a description of the instance of this famous puzzle involving n=2 eggs and a building with k=36 floors.<br>
+Suppose that we wish to know which stories in a 36-story building are safe to drop eggs from, and which will cause the eggs to break on landing. We make a few assumptions:<br>
+…..An egg that survives a fall can be used again.<br>
+…..A broken egg must be discarded.<br>
+…..The effect of a fall is the same for all eggs.<br>
+…..If an egg breaks when dropped, then it would break if dropped from a higher floor.<br>
+…..If an egg survives a fall then it would survive a shorter fall.<br>
+…..It is not ruled out that the first-floor windows break eggs, nor is it ruled out that the 36th-floor do not cause an egg to break.<br>
+If only one egg is available and we wish to be sure of obtaining the right result, the experiment can be carried out in only one way. Drop the egg from the first-floor window; if it survives, drop it from the second floor window. Continue upward until it breaks. In the worst case, this method may require 36 droppings. Suppose 2 eggs are available. What is the least number of egg-droppings that is guaranteed to work in all cases?<br>
+The problem is not actually to find the critical floor, but merely to decide floors from which eggs should be dropped so that total number of trials are minimized.<br>
+Source: Wiki for Dynamic Programming<br>
+Recommended: Please solve it on “PRACTICE ” first, before moving on to the solution.<br>
+In this post, we will discuss solution to a general problem with n eggs and k floors. The solution is to try dropping an egg from every floor (from 1 to k) and recursively calculate the minimum number of droppings needed in worst case. The floor which gives the minimum value in worst case is going to be part of the solution.<br>
+In the following solutions, we return the minimum number of trials in worst case; these solutions can be easily modified to print floor numbers of every trials also.<br>
+1) Optimal Substructure:<br>
+When we drop an egg from a floor x, there can be two cases (1) The egg breaks (2) The egg doesn’t break.<br>
+1) If the egg breaks after dropping from xth floor, then we only need to check for floors lower than x with remaining eggs; so the problem reduces to x-1 floors and n-1 eggs<br>
+2) If the egg doesn’t break after dropping from the xth floor, then we only need to check for floors higher than x; so the problem reduces to k-x floors and n eggs.<br>
+Since we need to minimize the number of trials in worst case, we take the maximum of two cases. We consider the max of above two cases for every floor and choose the floor which yields minimum number of trials.<br>
+  k ==> Number of floors<br>
+  n ==> Number of Eggs<br>
+  eggDrop(n, k) ==> Minimum number of trials needed to find the critical<br>
+                    floor in worst case.<br>
+  eggDrop(n, k) = 1 + min{max(eggDrop(n - 1, x - 1), eggDrop(n, k - x)): <br>
+  x in {1, 2, ..., k}}<br>
+2) Overlapping Subproblems<br>
+Following is recursive implementation that simply follows the recursive structure mentioned above.<br>
+<br>
+</p>
+<pre># include <stdio.h>
+# include <limits.h>
+ 
+// A utility function to get maximum of two integers
+int max(int a, int b) { return (a > b)? a: b; }
+ 
+/* Function to get minimum number of trials needed in worst
+  case with n eggs and k floors */
+int eggDrop(int n, int k)
+{
+    // If there are no floors, then no trials needed. OR if there is
+    // one floor, one trial needed.
+    if (k == 1 || k == 0)
+        return k;
+ 
+    // We need k trials for one egg and k floors
+    if (n == 1)
+        return k;
+ 
+    int min = INT_MAX, x, res;
+ 
+    // Consider all droppings from 1st floor to kth floor and
+    // return the minimum of these values plus 1.
+    for (x = 1; x <= k; x++)
+    {
+        res = max(eggDrop(n-1, x-1), eggDrop(n, k-x));
+        if (res < min)
+            min = res;
+    }
+ 
+    return min + 1;
+}
+ 
+/* Driver program to test to pront printDups*/
+int main()
+{
+    int n = 2, k = 10;
+    printf ("nMinimum number of trials in worst case with %d eggs and "
+             "%d floors is %d n", n, k, eggDrop(n, k));
+    return 0;
+}
+Run on IDE
+Output:
+Minimum number of trials in worst case with 2 eggs and 10 floors is 4
+It should be noted that the above function computes the same subproblems again and again. 
+See the following partial recursion tree, E(2, 2) is being evaluated twice.
+There will many repeated subproblems when you draw the complete recursion tree even for small values of n and k.
+
+                         E(2,4)
+                           |                      
+          ------------------------------------- 
+          |             |           |         |   
+          |             |           |         |       
+      x=1/          x=2/      x=3/     x=4/ 
+        /             /         ....      ....
+       /             /    
+ E(1,0)  E(2,3)     E(1,1)  E(2,2)
+          /  /...         /  
+      x=1/                 .....
+        /    
+     E(1,0)  E(2,2)
+            /   
+            ......
+            </pre><br>
+            <p>
+Partial recursion tree for 2 eggs and 4 floors.<br>
+Since same suproblems are called again, this problem has Overlapping Subprolems property. So Egg Dropping Puzzle has both properties (see this and this) of a dynamic programming problem. Like other typical Dynamic Programming(DP) problems, recomputations of same subproblems can be avoided by constructing a temporary array eggFloor[][] in bottom up manner.<br>
+Dynamic Programming Solution<br>
+Following are C++ and Python implementations for Egg Dropping problem using Dynamic Programming.<br>
+C++<br>
+Java<br>
+Python<br></p>
+<pre>
+# A Dynamic Programming based C++ Program for the Egg Dropping Puzzle
+# include <stdio.h>
+# include <limits.h>
+ 
+// A utility function to get maximum of two integers
+int max(int a, int b) { return (a > b)? a: b; }
+ 
+/* Function to get minimum number of trials needed in worst
+  case with n eggs and k floors */
+int eggDrop(int n, int k)
+{
+    /* A 2D table where entery eggFloor[i][j] will represent minimum
+       number of trials needed for i eggs and j floors. */
+    int eggFloor[n+1][k+1];
+    int res;
+    int i, j, x;
+ 
+    // We need one trial for one floor and0 trials for 0 floors
+    for (i = 1; i <= n; i++)
+    {
+        eggFloor[i][1] = 1;
+        eggFloor[i][0] = 0;
+    }
+ 
+    // We always need j trials for one egg and j floors.
+    for (j = 1; j <= k; j++)
+        eggFloor[1][j] = j;
+ 
+    // Fill rest of the entries in table using optimal substructure
+    // property
+    for (i = 2; i <= n; i++)
+    {
+        for (j = 2; j <= k; j++)
+        {
+            eggFloor[i][j] = INT_MAX;
+            for (x = 1; x <= j; x++)
+            {
+                res = 1 + max(eggFloor[i-1][x-1], eggFloor[i][j-x]);
+                if (res < eggFloor[i][j])
+                    eggFloor[i][j] = res;
+            }
+        }
+    }
+ 
+    // eggFloor[n][k] holds the result
+    return eggFloor[n][k];
+}
+ 
+/* Driver program to test to pront printDups*/
+int main()
+{
+    int n = 2, k = 36;
+    printf ("nMinimum number of trials in worst case with %d eggs and "
+             "%d floors is %d n", n, k, eggDrop(n, k));
+    return 0;
+}
+</pre><br>
+<p>Run on IDE<br>
+Output:<br>
+Minimum number of trials in worst case with 2 eggs and 36 floors is 8<br>
+Time Complexity: O(nk^2)<br>
+Auxiliary Space: O(nk)<br></p>
+
+
+<br><p>Wish you the BEST.
+<br>
+Regards
+<br>
+Mohammed Imran 
+</p>
+					
+					</div>	
+				</div>				
+			</div><!--/.blog-item-->
+		</div>
+	</section> 	
+	
+	<footer id="footer">
+		<div class="container text-center wow zoomIn" data-wow-duration="700ms" data-wow-delay="300ms">
+			<p>&copy; Copyright Reserved <a href="#">Placement Meant For You.</a> All rights reserved.</p>
+		</div>
+		<a data-scroll href="#navigation" class="to-top"></a>
+	</footer><!--/#footer--> 
+	
+	<!--/#scripts--> 
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>	
+	<script type="text/javascript" src="js/jquery.prettyPhoto.js"></script>
+	<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true"></script>
+  	<script type="text/javascript" src="js/gmaps.js"></script>
+  	<script type="text/javascript" src="js/jquery.parallax.js"></script>
+	<script type="text/javascript" src="js/jquery.isotope.min.js"></script>
+	<script type="text/javascript" src="js/jquery.easypiechart.min.js"></script>
+	<script type="text/javascript" src="js/jquery.appear.js"></script>
+	<script type="text/javascript" src="js/jquery.inview.min.js"></script>
+	<script type="text/javascript" src="js/wow.min.js"></script>
+	<script type="text/javascript" src="js/jquery.countTo.js"></script>
+	<script type="text/javascript" src="js/smooth-scroll.js"></script>
+	<script type="text/javascript" src="js/canvas.js"></script>
+	<script type="text/javascript" src="js/preloader.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>   
+</body>
+</html>
