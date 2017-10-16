@@ -30,6 +30,7 @@ li a:hover {
     <li> <a style=" text-decoration: none;" href="javascript:loadPage('index.php?admin/departments');"> Company Name</a></li>
     <li> <a style=" text-decoration: none;" href="javascript:loadPage('index.php?admin/examsresult');"> Examinations Results </a></li>
     <li> <a style=" text-decoration: none;" href="javascript:loadPage('index.php?admin/exams');"> Examinations </a></li>
+    <li> <a style=" text-decoration: none;" href="views/scripts/admin/enable.php"> Enable users </a></li>
     <li style="float: right;text-decoration: none"><a href="index.php?authenticate/logout"> Logout </a></li>
     </ul>
 </div>
